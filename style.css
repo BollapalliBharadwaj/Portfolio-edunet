@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #081b29;
+  color: #ededed;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  z-index: 100;
+}
+.logo {
+  font-size: 20px;
+  color: #ededed;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar a {
+  margin-left: 35px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ededed;
+  transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: rgba(9, 230, 97, 0.906);
+}
+.home {
+  height: 100vh;
+  background: url(bg.jpg) no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 8%;
+}
+.home-content h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.home-content p {
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+.btn-box {
+  display: flex;
+  gap: 20px;
+}
+.btn-box a {
+  padding: 12px 24px;
+  background-color: rgba(9, 230, 97, 0.906);
+  color: #081b29;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid rgba(9, 230, 97, 0.906);
+  transition: 0.3s;
+}
+.btn-box a:hover {
+  background-color: transparent;
+  color: rgba(9, 230, 97, 0.906);
+}
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  left: 8%; 
+  display: flex;
+  gap: 20px;
+}
+
+.home-sci a {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(9, 230, 97, 0.906);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(9, 230, 97, 0.906);
+  transition: 0.3s;
+}
+.home-sci a:hover {
+  background-color: rgba(9, 230, 97, 0.906);
+  color: #081b29;
+}
+.section {
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #081b29 0%, #0e2f3d 100%);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  color: rgba(9, 230, 97, 0.906);
+  position: relative;
+  display: inline-block;
+}
+.section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: rgba(9, 230, 97, 0.906);
+  margin-top: 8px;
+  border-radius: 5px;
+}
+.section p, .section ul, .section li {
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #ccc;
+}
+.project {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid rgba(9, 230, 97, 0.3);
+  border-radius: 8px;
+  background-color: #0f2a35;
+  transition: transform 0.3s ease;
+}
+.project:hover {
+  transform: scale(1.02);
+}
+.project a {
+  color: rgba(9, 230, 97, 0.906);
+  text-decoration: underline;
+}
+.two-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.two-column .left {
+  flex: 1;
+  min-width: 280px;
+}
+.two-column .right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.profile-hero-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid rgba(9, 230, 97, 0.906);
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(9, 230, 97, 0.4);
+  transition: transform 0.3s ease;
+  margin-left: auto;
+}
+.profile-hero-img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .two-column .right, .two-column .left {
+    flex: 1 1 100%;
+  }
+  .profile-hero-img {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 20px;
+  }
+}
+.card {
+  background-color: rgba(0, 0, 0, 0.2);  
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.card:hover {
+  transform: scale(1.01);
+}
+
